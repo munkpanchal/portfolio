@@ -62,6 +62,9 @@ h6 {
     // overflow: hidden;
     background-color: #5a585a20;
     border-radius: 8px;
+    @include mobile {
+        display: none;
+    }
 
     [data-progress-bar] {
         display: block;
@@ -83,30 +86,6 @@ h6 {
 }
 html {
     overscroll-behavior: none;
-}
-
-.website-logo {
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    z-index: 99;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 38.5% 80%);
-    // clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-    // clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 50% 50%, 50% 50%, 50% 50%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 50% 50%, 50% 50%, 50% 50%, 25% 100%, 100% 100%, 100% 100%, 100% 0%);
-}
-.website-content {
-    // position: fixed;
-    top: 0;
-    width: 100%;
-    min-height: 100vh;
 }
 
 .preloader {
