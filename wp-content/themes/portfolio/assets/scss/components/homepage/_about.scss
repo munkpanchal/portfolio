@@ -1,0 +1,32 @@
+.home-about-content {
+    @apply flex justify-center items-center;
+
+    .scroll-reveal [data-hac-heading] {
+        @apply text-6xl text-center;
+    }
+    .scroll-reveal [data-hac-heading] {
+        letter-spacing: 1.5px;
+        line-height: 1.25;
+        text-wrap: pretty;
+        display: inline;
+        color: #24242410;
+        background-image: linear-gradient(var(--clr-black), var(--clr-black));
+        background-clip: text;
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        animation: textReveal 2s linear forwards;
+        animation-timeline: view();
+        animation-range-start: cover 10vh;
+        animation-range-end: cover 60vh;
+
+        span {
+            @apply font-black underline;
+        }
+    }
+
+    @keyframes textReveal {
+        to {
+            background-size: 100% 100%;
+        }
+    }
+}

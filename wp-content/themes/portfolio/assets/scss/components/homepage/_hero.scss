@@ -1,0 +1,62 @@
+.hero {
+    @apply w-screen;
+    &-heading {
+        @apply text-center text-4xl sm:text-7xl sm:max-w-5xl;
+        letter-spacing: 2px;
+        line-height: 1;
+        text-wrap: balance;
+        overflow: hidden;
+        .char {
+            font-family: var(--ff-primary);
+            transform: translateY(150px);
+            transition: transform 0.5s;
+        }
+        span {
+            .char {
+                @apply max-sm:text-2xl;
+            }
+        }
+    }
+    &-para,
+    &-button {
+        scale: 0.5;
+        opacity: 0;
+    }
+    &-para {
+        @apply text-lg text-center;
+        width: min(100%, 96ch);
+        text-wrap: pretty;
+    }
+    &-content {
+        @apply flex flex-col justify-evenly items-center;
+        height: calc(100vh - var(--height-header));
+    }
+    &-button {
+        @apply text-xs font-semibold relative block uppercase;
+
+        &-image {
+            position: absolute;
+            top: calc(100% + 1rem);
+            left: 50%;
+            transform: translateX(-50%) translateY(0);
+            width: 24px;
+            display: block;
+            background-image: var(--url);
+            &:not(:hover) {
+                animation: upDown 2s ease-in-out infinite;
+            }
+
+            @keyframes upDown {
+                0% {
+                    transform: translateX(-50%) translateY(0);
+                }
+                50% {
+                    transform: translateX(-50%) translateY(10px);
+                }
+                100% {
+                    transform: translateX(-50%) translateY(0);
+                }
+            }
+        }
+    }
+}

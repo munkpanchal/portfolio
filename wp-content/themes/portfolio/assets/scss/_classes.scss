@@ -1,0 +1,22 @@
+#searchBar {
+    @apply px-2 py-1;
+    border-bottom: 1px solid var(--clr-black);
+    &:focus-within,
+    &:focus,
+    &:focus-visible {
+        border-bottom: 1px solid var(--clr-black);
+
+        outline: none;
+    }
+
+    &::placeholder {
+        @apply text-sm;
+    }
+}
+.anchor {
+    @apply uppercase text-sm;
+}
+
+.section {
+    @apply h-screen;
+}

@@ -1,0 +1,136 @@
+// Typography will come here
+* {
+    font-family: var(--ff-secondary);
+    letter-spacing: 1.5px;
+}
+
+body {
+    color: var(--clr-black);
+    cursor: none;
+    font-weight: light;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    ::selection {
+        background: var(--clr-gray);
+        color: var(--clr-white);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-primary);
+    letter-spacing: 2px;
+}
+
+.cursor-dot {
+    height: 8px;
+    width: 8px;
+    background-color: var(--clr-black);
+}
+.cursor-box {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--clr-black);
+}
+
+.cursor-box,
+.cursor-dot {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 99;
+    isolation: isolate;
+    pointer-events: none;
+}
+
+[data-progress-track] {
+    height: 200px;
+    width: 8px;
+    display: block;
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    // overflow: hidden;
+    background-color: #5a585a20;
+    border-radius: 8px;
+
+    [data-progress-bar] {
+        display: block;
+        width: 100%;
+        background: var(--clr-black);
+        height: 200px;
+        scale: 1 0;
+        border-radius: 8px;
+        transform-origin: top;
+        animation: scroll-watcher linear;
+        animation-timeline: scroll();
+    }
+
+    @keyframes scroll-watcher {
+        to {
+            scale: 1 1;
+        }
+    }
+}
+html {
+    overscroll-behavior: none;
+}
+
+.website-logo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 38.5% 80%);
+    // clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    // clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 50% 50%, 50% 50%, 50% 50%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 50% 50%, 50% 50%, 50% 50%, 25% 100%, 100% 100%, 100% 100%, 100% 0%);
+}
+.website-content {
+    // position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.preloader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    .letters {
+        flex: 1;
+        display: flex;
+        span {
+            flex: 1;
+            font-family: var(--ff-primary);
+            font-size: 15vw;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+    }
+}

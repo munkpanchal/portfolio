@@ -1,0 +1,20 @@
+// root file
+:root {
+    /* font families */
+
+    --ff-primary: "Racing Sans One", sans-serif;
+    --ff-secondary: "Lato", sans-serif;
+
+    /* font weights */
+    --fw-base: 400;
+    --fw-semibold: 700;
+    --fw-bold: 900;
+
+    /* primary color */
+    --clr-black: #242424;
+    --clr-white: #f7f7f7;
+    --clr-gray: #5a585a;
+
+    --width-container: min(1200px, 100%);
+    --height-header: 6rem;
+}

@@ -1,0 +1,44 @@
+/*   mixin for mobile device */
+
+@mixin mobile {
+    @media only screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+/*   mixin for tablet device */
+
+@mixin tablet {
+    @media only screen and (min-width: 576px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+/*   mixin for normal desktop device */
+
+@mixin desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+/*   mixin for widescreen desktop device */
+
+@mixin widescreen {
+    @media only screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+/*   mixin for landscapes device */
+
+@mixin landscapes {
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@function staticUrl($val) {
+    $str: "/wp-content/themes/tikovina/public";
+    @return url($str + $val);
+}

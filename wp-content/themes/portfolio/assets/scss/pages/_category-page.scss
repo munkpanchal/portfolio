@@ -1,0 +1,29 @@
+.category-page {
+    .cat-nav-links {
+        position: sticky;
+        top: var(--height-header);
+        padding-bottom: 1rem;
+        background-color: var(--clr-white);
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .cat-nav-link {
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.75;
+            transition: all 300ms ease-in-out;
+            &.active,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .projects {
+        @apply flex flex-col gap-8 items-center pb-8;
+        .project {
+            width: 450px;
+        }
+    }
+}

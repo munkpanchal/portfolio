@@ -1,0 +1,11 @@
+.footer {
+    &-wrapper {
+        .footer-top {
+            @apply mb-16 flex flex-col gap-12;
+            // border: 1px solid #ccc;
+        }
+        .footer-bottom {
+            @apply flex justify-between capitalize;
+        }
+    }
+}
