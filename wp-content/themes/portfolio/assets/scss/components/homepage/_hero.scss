@@ -28,7 +28,7 @@
         text-wrap: pretty;
     }
     &-content {
-        @apply flex flex-col justify-evenly items-center;
+        @apply flex flex-col justify-start gap-8 sm:justify-evenly items-center;
         height: calc(100vh - var(--height-header));
     }
     &-button {
