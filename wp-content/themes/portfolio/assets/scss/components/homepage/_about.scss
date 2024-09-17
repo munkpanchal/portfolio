@@ -2,7 +2,7 @@
     @apply flex justify-center items-center;
 
     .scroll-reveal [data-hac-heading] {
-        @apply text-6xl text-center;
+        @apply text-4xl sm:text-6xl text-center;
     }
     .scroll-reveal [data-hac-heading] {
         letter-spacing: 1.5px;
