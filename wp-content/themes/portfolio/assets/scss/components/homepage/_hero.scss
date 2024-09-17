@@ -30,6 +30,9 @@
     &-content {
         @apply flex flex-col justify-evenly sm:items-center max-sm:py-8;
         height: calc(100vh - var(--height-header));
+        @include mobile {
+            height: calc(100vh - var(--height-header) * 2);
+        }
     }
     &-button {
         @apply text-xs max-sm:text-center font-semibold relative block uppercase;
