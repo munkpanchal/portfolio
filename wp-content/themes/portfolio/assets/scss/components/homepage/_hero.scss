@@ -1,7 +1,7 @@
 .hero {
     @apply w-screen;
     &-heading {
-        @apply text-center text-4xl sm:text-7xl sm:max-w-5xl;
+        @apply sm:text-center text-3xl sm:text-7xl sm:max-w-5xl;
         letter-spacing: 2px;
         line-height: 1;
         text-wrap: balance;
@@ -23,16 +23,16 @@
         opacity: 0;
     }
     &-para {
-        @apply text-lg text-center;
+        @apply text-sm max-sm:leading-relaxed sm:text-lg sm:text-center;
         width: min(100%, 96ch);
         text-wrap: pretty;
     }
     &-content {
-        @apply flex flex-col justify-start gap-8 sm:justify-evenly items-center max-sm:py-8;
+        @apply flex flex-col justify-evenly sm:items-center max-sm:py-8;
         height: calc(100vh - var(--height-header));
     }
     &-button {
-        @apply text-xs font-semibold relative block uppercase;
+        @apply text-xs max-sm:text-center font-semibold relative block uppercase;
 
         &-image {
             position: absolute;
