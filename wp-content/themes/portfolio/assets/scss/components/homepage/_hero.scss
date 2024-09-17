@@ -1,7 +1,7 @@
 .hero {
     @apply w-screen;
     &-heading {
-        @apply sm:text-center text-3xl sm:text-7xl sm:max-w-5xl;
+        @apply sm:text-center text-[2rem] sm:text-7xl sm:max-w-5xl;
         letter-spacing: 2px;
         line-height: 1;
         text-wrap: balance;
