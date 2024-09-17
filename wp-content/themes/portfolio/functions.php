@@ -11,7 +11,7 @@ if (!defined('ABSPATH'))
 
 // it is recommended to move it into wp-config.php
 
-define('IS_VITE_DEVELOPMENT', true);
+define('IS_VITE_DEVELOPMENT', false);
 
 /* Including Vite file  */
 include "inc/inc.vite.php";
