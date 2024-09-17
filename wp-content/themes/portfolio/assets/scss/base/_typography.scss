@@ -49,6 +49,9 @@ h6 {
     z-index: 99;
     isolation: isolate;
     pointer-events: none;
+    @include mobile {
+        display: none;
+    }
 }
 
 [data-progress-track] {
