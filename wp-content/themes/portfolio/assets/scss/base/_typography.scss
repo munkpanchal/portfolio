@@ -97,12 +97,18 @@ html {
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     width: 100%;
     z-index: 99;
     height: 100%;
     background: white;
-    display: flex;
-    align-items: center;
+    .abc {
+        display: flex;
+        align-items: center;
+    }
     .letters {
         flex: 1;
         display: flex;
@@ -114,5 +120,8 @@ html {
             text-transform: uppercase;
             letter-spacing: -1px;
         }
+    }
+    .percentage {
+        @apply text-xl sm:text-5xl;
     }
 }

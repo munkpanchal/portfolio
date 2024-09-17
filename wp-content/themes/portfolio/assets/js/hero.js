@@ -1,10 +1,10 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger, TextPlugin } from "gsap/all";
 import { default as SplitType } from "split-type";
 
 const myText = new SplitType("#hero-heading");
-console.log(myText);
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 function preloader() {
     document.addEventListener("DOMContentLoaded", () => {
@@ -12,9 +12,29 @@ function preloader() {
         const tl = gsap.timeline();
 
         const height = window.innerHeight;
-        tl.delay(2);
+        tl.delay(0.3);
 
         const dur = 0.6;
+        const valueElement = document.getElementById("percentage");
+        const numbers = [];
+        while (numbers.length < 10) {
+            const randomNum = Math.floor(Math.random() * 101);
+            if (!numbers.includes(randomNum)) {
+                numbers.push(randomNum);
+            }
+        }
+
+        numbers.sort((a, b) => a - b);
+        numbers.push(100);
+
+        numbers.forEach((number, index) => {
+            tl.to(valueElement, {
+                duration: dur / (numbers.length * 2),
+                ease: "power2.inOut",
+                text: { value: `${number}%` },
+                delay: index * (dur / (numbers.length * 4)),
+            });
+        });
 
         tl.to(".letters:first-child", {
             x: () => -innerWidth * 3,

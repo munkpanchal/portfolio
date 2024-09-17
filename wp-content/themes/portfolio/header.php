@@ -29,19 +29,26 @@
 
 
     <div class="preloader">
-        <div class="letters">
-            <span>p</span>
-            <span>o</span>
-            <span>r</span>
-            <span>t</span>
+        <div class="abc">
+
+            <div class="letters">
+                <span>p</span>
+                <span>o</span>
+                <span>r</span>
+                <span>t</span>
+            </div>
+            <div class="letters">
+                <span>f</span>
+                <span>o</span>
+                <span>l</span>
+                <span>i</span>
+                <span>o</span>
+            </div>
         </div>
-        <div class="letters">
-            <span>f</span>
-            <span>o</span>
-            <span>l</span>
-            <span>i</span>
-            <span>o</span>
+        <div class="counter">
+            <span class="percentage" id="percentage">0%</span>
         </div>
+
     </div>
 
 
@@ -65,6 +72,7 @@
                             </span>
                         </span>
                     </h1>
+
                 </a>
 
                 <!-- <div class="search">
